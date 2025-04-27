@@ -57,6 +57,7 @@ font.init()
 font = font.Font(None, 35)
 lose1 = font.render('PLAYER 1 LOSE!', True, (180, 0, 0))
 lose2 = font.render('PLAYER 2 LOSE!', True, (180, 0, 0))
+restart = font.render('WANT RESTART?(SPACE)', True, (180, 0, 0))
 
 speed_x = 3
 speed_y = 3
@@ -89,9 +90,9 @@ while game:
 
         # если мяч улетел дальше ракетки, выводим условие проигрыша для второго игрока
         if ball.rect.x > win_width:
-            finish = True
             window.blit(lose2, (200, 200))
             game_over = True
+            finish = True
 
         racket1.reset()
         racket2.reset()
@@ -99,3 +100,5 @@ while game:
 
     display.update()
     clock.tick(FPS)
+
+    #afskdfksdfkdfkskd
